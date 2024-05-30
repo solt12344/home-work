@@ -4,6 +4,16 @@
 	font-weight: 500;
 	text-align: center;
 }
+.btn:hover {
+	transition: 0.3s;
+	background-color: #fff;
+	color: #22262a;
+}
+.btn_sm:hover {
+	transition: 0.3s;
+	background-color: #22262a;
+	color: #fff;
+}
 .header {
 	padding: 20px 0;
 	text-transform: uppercase;
@@ -25,7 +35,8 @@
 .header__item {
 	position: relative;
 }
-.header__item::before {
+.header__item::before,
+.avone__text:before {
 	content: "";
 	position: absolute;
 	bottom: -2px;
@@ -50,6 +61,9 @@
 }
 .header__btn-menu {
 	display: none;
+}
+.hgroup {
+	text-align: center;
 }
 .collusion {
 	background-image: url(../img/collusion/collusion__bg.jpg);
@@ -153,6 +167,8 @@
 	margin-bottom: 72px;
 }
 .title {
+	text-transform: uppercase;
+	margin-bottom: 15px;
 	font-weight: 700;
 	font-size: 20px;
 }
@@ -172,6 +188,7 @@
 	flex-grow: 1;
 }
 .img-wrap {
+	line-height: 0;
 	position: relative;
 	overflow: hidden;
 }
@@ -210,7 +227,55 @@
 .discount-prise {
 	color: #cf2929;
 }
+.avone {
+	padding: 55px 0 60.5px;
+}
+.avone__hgroup {
+	margin-bottom: 60px;
+}
+.avone__desc {
+	text-transform: capitalize;
+}
+.avone__row {
+	display: flex;
+	gap: 29px;
+}
+.avone__col {
+	flex: 1 1 50%;
+}
+.avone__first-img-wrap {
+	margin-top: 87px;
+	padding-bottom: 109.058%;
+}
+.avone__second-img-wrap {
+	padding-bottom: 81.7432%;
+	overflow: visible;
+}
+.avone__second-img-wrap::after {
+	content: "";
+	background-image: url(/img/avone/3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 86.031%;
+	left: 59.34%;
+	border-left: 20px solid #fff;
+	border-top: 20px solid #fff;
+	width: 44.16%;
+	height: 54.67%;
+}
+.avone__text {
+	font-size: clamp(10px, 1vw, 15px);
+	position: absolute;
+	cursor: pointer;
+	top: 138.581%;
+	left: 23.93%;
+	text-transform: uppercase;
+	height: 2.1%;
+}
 .tachen {
+	margin-top: 60.5px;
 	background-image: url(../img/tachen/tachen_bg.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -229,6 +294,7 @@
 	font-weight: 500;
 	font-size: clamp(14px, 2vw, 18px);
 	margin-bottom: 22px;
+	text-align: left;
 }
 .tachen__title {
 	font-weight: 700;
@@ -240,15 +306,102 @@
 	color: #fff;
 	padding: 0.25em 1.625em;
 }
+.footer {
+	background-color: #f2f8fc;
+	padding: 115px 0 0;
+}
+.email__wrap {
+	display: flex;
+	gap: 12.25em;
+}
+.email__logo {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: clamp(12px, 2vw, 25px);
+	margin-bottom: 1.0625em;
+}
+.email__text {
+	max-width: 406px;
+	margin-bottom: 2.5625em;
+}
+.email__address {
+	display: flex;
+	flex-direction: column;
+}
+.email__desc {
+	margin-bottom: 1em;
+}
+.email__email {
+	margin-bottom: 0.4375em;
+	position: relative;
+}
+.email__email::before {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	background-color: black;
+	height: 1px;
+	width: 56%;
+}
+.email__lable {
+	position: relative;
+	display: block;
+}
+.email__input {
+	width: 100%;
+	padding: 11px 24px;
+	margin-bottom: 4.375em;
+}
+.email__btn {
+	position: absolute;
+	right: 23px;
+	top: 11px;
+	font-weight: 600;
+}
+.email__nav {
+	display: flex;
+	gap: 5.5em;
+	padding-bottom: 6.625em;
+}
+.email__list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.3125em;
+}
+.email__item-logo {
+	font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 0.375em;
+}
+.second-container {
+	width: 100%;
+	text-align: center;
+	background-color: #e7f5f8;
+	padding: 35px 0;
+}
 @media (hover: hover) {
 	.womens__img-wrap:hover,
 	.mens__img-wrap:hover {
 		transition: 0.3s;
 		transform: scale(1.03);
 	}
-	.header__item:hover::before {
+	.header__item:hover::before,
+	.avone__text:hover::before {
 		transition: 0.3s;
 		width: 100%;
+	}
+}
+@media (max-width: 1150px) {
+	.email__wrap {
+		flex-direction: column;
+	}
+	.email__email {
+		max-width: 33%;
+	}
+	.email__email::before {
+		width: 70%;
 	}
 }
 @media (max-width: 994px) {
@@ -322,6 +475,12 @@
 	.header__btn-menu_open .header__line:nth-of-type(3) {
 		transform: rotate(-45deg);
 		top: 9px;
+	}
+}
+@media (max-width: 700px) {
+	.avone__row {
+		flex-direction: column;
+		margin-bottom: 20%;
 	}
 }
 @media (max-width: 650px) {
