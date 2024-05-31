@@ -349,6 +349,7 @@
 	display: block;
 }
 .email__input {
+	border: none;
 	width: 100%;
 	padding: 11px 24px;
 	margin-bottom: 4.375em;
