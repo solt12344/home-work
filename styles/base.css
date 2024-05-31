@@ -9,7 +9,7 @@ html {
 body {
 	min-width: 320px;
 	font-family: "Poppins", Arial, Helvetica, sans-serif;
-	font-size: 15px;
+	font-size: clamp(7px, 2vw, 15px);
 	font-weight: 400;
 	color: #22262a;
 	background-color: #fff;
