@@ -334,6 +334,7 @@
 .email__email {
 	margin-bottom: 0.4375em;
 	position: relative;
+	display: inline-block;
 }
 .email__email::before {
 	content: "";
@@ -342,7 +343,7 @@
 	left: 0;
 	background-color: black;
 	height: 1px;
-	width: 56%;
+	width: 100%;
 }
 .email__lable {
 	position: relative;
@@ -353,6 +354,8 @@
 	width: 100%;
 	padding: 11px 24px;
 	margin-bottom: 4.375em;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.07);
+	text-transform: capitalize;
 }
 .email__btn {
 	position: absolute;
@@ -397,12 +400,8 @@
 @media (max-width: 1150px) {
 	.email__wrap {
 		flex-direction: column;
-	}
-	.email__email {
-		max-width: 33%;
-	}
-	.email__email::before {
-		width: 70%;
+		align-items: center;
+		text-align: center;
 	}
 }
 @media (max-width: 994px) {
